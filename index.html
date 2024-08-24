@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Prediction Project</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+          Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        background-color: #201d1d;
+        color: #ffffff;
+        line-height: 1.6;
+        padding: 40px;
+      }
+      header {
+        background-color: #1e1e1e;
+        padding: 1rem;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      .container {
+        padding: 2rem;
+      }
+      h2 {
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 0.5rem;
+      }
+      .link {
+        color: #1e90ff;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+
+      .visualization {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+      }
+
+      .visualization img {
+        /* max-width: 100%; */
+        height: auto;
+        margin: 1rem 0;
+      }
+      footer {
+        background-color: #1e1e1e;
+        padding: 1rem;
+        text-align: center;
+      }
+      .menu-bar {
+        background-color: #201d1d; /* Dark background for the menu */
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+      .menu-bar a {
+        color: #ffffff; /* White text for menu items */
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+      <a href="https://www.emilwestling.com">About Me</a>
+      <a href="https://www.emilwestling.com/portfolio.html">Portfolio</a>
+      <a href="https://www.emilwestling.com/resume.pdf" target="_blank"
+        >Resume</a
+      >
+    </div>
+
+    <header>
+      <h1>Stock Prediction Project</h1>
+    </header>
+
+    <div class="container">
+      <section>
+        <h2>Overview</h2>
+        <p>
+          This project aims to forecast the closing prices and directions of
+          stock movements for AAPL and AMZN. I used AutoRegressive (AR) models
+          with different lags and external variables such as trading volume,
+          sentiment derived from Twitter data, and the S&P 500 index.
+        </p>
+      </section>
+
+      <section>
+        <h2>Data Collection</h2>
+        <ul>
+          <li>
+            <strong>Yahoo Finance:</strong> Historical stock data for AAPL and
+            AMZN from 2021-09-30 to 2022-09-30.
+          </li>
+          <li>
+            <strong>Twitter Data:</strong> Collected sentiment data for AAPL and
+            AMZN from tweets using a custom sentiment analysis function.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Models Used</h2>
+        <p><strong>AutoRegressive (AR) Model:</strong></p>
+        <ul>
+          <li>
+            <strong>Price Prediction:</strong> Forecasts the stock price at time
+            t using a specified lag.
+          </li>
+          <li>
+            <strong>Direction Prediction:</strong> Predicts the gradient (up or
+            down) of stock price movements using a specified lag.
+          </li>
+        </ul>
+        <p>Each model is tested using the following external variables:</p>
+        <ul>
+          <li><strong>Volume:</strong> Trading volume.</li>
+          <li><strong>Sentiment:</strong> Twitter sentiment analysis.</li>
+          <li><strong>S&P 500 Index:</strong> Overall market movement.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Results</h2>
+        <p>
+          The results are summarized in the table below. An interactive plot of
+          the results can be found <a href="plot.html">here</a>.
+        </p>
+        <img src="images/mae_results.png" alt="table of MAE results" />
+      </section>
+
+      <section>
+        <h2>Visualizations</h2>
+        <h3>Candle Charts</h3>
+        <div class="visualization">
+          <img
+            src="images/apple_candlestick.png"
+            alt="AAPL Candle Chart"
+            width="600"
+            height="450"
+          />
+          <img
+            src="images/amazon_candlestick.png"
+            alt="AMZN Candle Chart"
+            width="600"
+            height="450"
+          />
+        </div>
+        <h3>Comparative Plots</h3>
+        <div class="visualization">
+          <img
+            src="images/apple_comparison.png"
+            alt="AAPL Comparative Plot"
+            width="600"
+            height="450"
+          />
+          <img
+            src="images/amazon_comparison.png"
+            alt="AMZN Comparative Plot"
+            width="600"
+            height="450"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Conclusion</h2>
+        <p>
+          The project demonstrates how different models and external factors can
+          influence stock price predictions. The AR models with external
+          variables such as trading volume and sentiment provide different
+          levels of accuracy, highlighting the importance of selecting
+          appropriate inputs for financial forecasting.
+        </p>
+      </section>
+
+      <section>
+        <h2>Project Repository</h2>
+        <p>
+          You can find the full code and data on my
+          <a
+            class="link"
+            href="https://github.com/emilwestling/StockPrediction"
+            target="_blank"
+            >GitHub repository</a
+          >.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Emil Westling. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
