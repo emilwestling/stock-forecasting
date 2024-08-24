@@ -67,6 +67,7 @@ The project evaluates different models by comparing their Mean Absolute Error (M
 
 ## Repository Structure
 
+- `index.html`: Portfolio website.
 - `stock_prediction.ipynb`: Jupyter Notebook containing the project code and analysis.
 - `images/`: Directory containing visualizations and charts.
 - `data/`: Directory containing tweets that are used for sentiment analysis.

@@ -14,28 +14,39 @@
         padding: 40px;
       }
       header {
-        background-color: #1e1e1e;
+        background-color: #201d1d;
         padding: 1rem;
         text-align: center;
+      }
+      nav {
+        margin: 20px;
+        text-align: center;
+      }
+      nav a {
+        color: #64b5f6;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
       }
       header h1 {
         margin: 0;
       }
       .container {
-        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
       }
       h2 {
-        border-bottom: 2px solid #ffffff;
+        border-bottom: 2px solid #64b5f6;
         padding-bottom: 0.5rem;
       }
       .link {
-        color: #1e90ff;
+        color: #64b5f6;
         text-decoration: none;
       }
       .link:hover {
         text-decoration: underline;
       }
-
       .visualization {
         display: flex;
         justify-content: space-around;
@@ -83,9 +94,19 @@
     <header>
       <h1>Stock Prediction Project</h1>
     </header>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#data collection">Data Collection</a>
+      <a href="#models">Models Used</a>
+      <a href="#results">Results</a>
+      <a href="#visualizations">Visualizations</a>
+      <a href="#conclusion">Conclusion</a>
+      <a href="#github">Project Repository</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
     <div class="container">
-      <section>
+      <section id="overview">
         <h2>Overview</h2>
         <p>
           This project aims to forecast the closing prices and directions of
@@ -95,7 +116,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="data collection">
         <h2>Data Collection</h2>
         <ul>
           <li>
@@ -109,7 +130,7 @@
         </ul>
       </section>
 
-      <section>
+      <section id="models">
         <h2>Models Used</h2>
         <p><strong>AutoRegressive (AR) Model:</strong></p>
         <ul>
@@ -130,16 +151,16 @@
         </ul>
       </section>
 
-      <section>
+      <section id="results">
         <h2>Results</h2>
         <p>
           The results are summarized in the table below. An interactive plot of
-          the results can be found <a href="plot.html">here</a>.
+          the results can be found <a class="link" href="plot.html">here</a>.
         </p>
         <img src="images/mae_results.png" alt="table of MAE results" />
       </section>
 
-      <section>
+      <section id="visualizations">
         <h2>Visualizations</h2>
         <h3>Candle Charts</h3>
         <div class="visualization">
@@ -173,7 +194,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="conclusions">
         <h2>Conclusion</h2>
         <p>
           The project demonstrates how different models and external factors can
@@ -184,7 +205,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="github">
         <h2>Project Repository</h2>
         <p>
           You can find the full code and data on my
@@ -194,6 +215,18 @@
             target="_blank"
             >GitHub repository</a
           >.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          For more information or inquiries about this project, please contact
+          me at:
+          <br />
+          <a class="link" href="mailto:westling01@gmail.com"
+            >westling01@gmail.com</a
+          >
         </p>
       </section>
     </div>
